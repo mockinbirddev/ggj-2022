@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class PlayerController : MonoBehaviour
 {
     public float movement_speed = 10f;
@@ -28,9 +27,9 @@ public class PlayerController : MonoBehaviour
 
         movement_direction = new Vector2(move_x_axis, move_y_axis);
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetButtonDown("Jump"))
         {
-            Attack();
+            Jump();
         }
         if(Input.GetKeyDown("r"))
         {
@@ -43,16 +42,9 @@ public class PlayerController : MonoBehaviour
         _rigid_body.velocity = new Vector2(movement_direction.x * movement_speed, movement_direction.y * movement_speed);
     }
 
-    public void Attack()
+    public void Jump()
     {
-        if (Item.hasPizza > 0) {
-            Debug.Log("I threw a slice of pizza!");
-            Item.hasPizza = Item.hasPizza - 1;
-            Debug.Log("The numbers of pizza slices left: " + Item.hasPizza);
-        } else {
-            Debug.Log("I have nothing to throw!");
-            Debug.Log("I have " + Item.hasPizza + " slices of pizza.");
-        }
+        Debug.Log("Jump");
     }
 
     public void Other()

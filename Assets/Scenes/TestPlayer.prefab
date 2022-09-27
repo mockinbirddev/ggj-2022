@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 386410812905650568}
   - component: {fileID: 386410812905650583}
   - component: {fileID: 386410812905650582}
+  - component: {fileID: 6072092828791888958}
+  - component: {fileID: 8512561079807390985}
   m_Layer: 0
   m_Name: TestPlayer
   m_TagString: Untagged
@@ -148,3 +150,40 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6072092828791888958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386410812905650581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9481b2b2bb8d86145998a6bc0463e61e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+--- !u!114 &8512561079807390985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386410812905650581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectInterest: 1
+  DefaultInterestGroups: []
+  DestroyWhenStateAuthorityLeaves: 0
+  AllowStateAuthorityOverride: 1
+  AoiPositionSource: {fileID: 0}
+  Flags: 2305
+  NetworkGuid:
+    RawGuidValue: 611efc1611f2cc9488103dc966475fc8
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 6072092828791888958}
+  SimulationBehaviours: []
