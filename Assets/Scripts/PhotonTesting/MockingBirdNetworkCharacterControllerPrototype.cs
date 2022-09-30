@@ -2,9 +2,6 @@ using System;
 using Fusion;
 using UnityEngine;
 
-// [RequireComponent(typeof(CharacterController))]
-[OrderBefore(typeof(NetworkTransform))]
-[DisallowMultipleComponent]
 // ReSharper disable once CheckNamespace
 public class MockingBirdNetworkCharacterControllerPrototype : NetworkTransform {
   // [Header("Character Controller Settings")]
@@ -94,7 +91,7 @@ public class MockingBirdNetworkCharacterControllerPrototype : NetworkTransform {
   public virtual void Move(Vector2 direction) {
     var deltaTime    = Runner.DeltaTime;
     var previousPos  = transform.position;
-    var moveVelocity = Velocity;
+    Vector2 moveVelocity = Velocity;
 
     direction = direction.normalized;
 
@@ -119,7 +116,8 @@ public class MockingBirdNetworkCharacterControllerPrototype : NetworkTransform {
 
     moveVelocity.x = direction.x * speed;
     moveVelocity.y = direction.y * speed;
-    rigidbody2D.velocity = new Vector2(moveVelocity.x,moveVelocity.y);
+    rigidbody2D.velocity = new Vector2(moveVelocity.x, moveVelocity.y);
+    Debug.Log(rigidbody2D.velocity);
 
     // Velocity   = (transform.position - previousPos) * Runner.Simulation.Config.TickRate;
   }

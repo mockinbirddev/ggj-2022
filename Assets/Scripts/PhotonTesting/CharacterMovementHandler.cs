@@ -6,11 +6,11 @@ using Fusion;
 public class CharacterMovementHandler : NetworkBehaviour
 {
     //Other component
-    MockingBirdNetworkCharacterControllerPrototype networkCharacterController;
+    NetworkCharacterController networkCharacterController;
 
     private void Awake() 
     {
-        networkCharacterController = GetComponent<MockingBirdNetworkCharacterControllerPrototype>();
+        networkCharacterController = GetComponent<NetworkCharacterController>();
         
     }
 

@@ -6,6 +6,4 @@ using Fusion;
 public struct NetworkInputData : INetworkInput
 {
     public Vector2 movementInput;
-    public float rotation;
-    public bool dropOff;
 }
