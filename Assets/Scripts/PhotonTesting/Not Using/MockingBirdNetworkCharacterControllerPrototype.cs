@@ -1,3 +1,4 @@
+#pragma warning disable 0108
 using System;
 using Fusion;
 using UnityEngine;

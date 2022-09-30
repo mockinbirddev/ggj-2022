@@ -4,8 +4,8 @@ using UnityEngine;
 
 public static class Utils
 {
-    public static Vector3 GetRandomSpawnPoint()
+    public static Vector2 GetRandomSpawnPoint()
     {
-        return new Vector3(Random.Range(-9,9), Random.Range(-4,4), 0f);
+        return new Vector2(Random.Range(-9,9), Random.Range(-4,4));
     }
 }
