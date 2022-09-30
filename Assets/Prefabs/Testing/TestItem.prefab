@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2740160921734808790}
   - component: {fileID: 7534679550476266002}
   - component: {fileID: 7502456765712626380}
+  - component: {fileID: -718258238805288365}
   m_Layer: 0
   m_Name: TestItem
   m_TagString: Untagged
@@ -97,3 +98,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e1881457edff224c9c85fc1cb5e1aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-718258238805288365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2610511755372875678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectInterest: 1
+  DefaultInterestGroups: []
+  DestroyWhenStateAuthorityLeaves: 0
+  AllowStateAuthorityOverride: 1
+  AoiPositionSource: {fileID: 0}
+  Flags: 2305
+  NetworkGuid:
+    RawGuidValue: a119e61099524d04c90780a517458797
+  NestedObjects: []
+  NetworkedBehaviours: []
+  SimulationBehaviours: []
