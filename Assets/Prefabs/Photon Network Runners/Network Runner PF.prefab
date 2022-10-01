@@ -11,9 +11,6 @@ GameObject:
   - component: {fileID: 3598371471306379230}
   - component: {fileID: 1431638035156470358}
   - component: {fileID: 1390176709849661138}
-  - component: {fileID: 28848441563301871}
-  - component: {fileID: 4892138380135334777}
-  - component: {fileID: 7797904396008195390}
   m_Layer: 0
   m_Name: Network Runner PF
   m_TagString: Untagged
@@ -61,59 +58,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 651203320086808080, guid: 271cb8c639121934585bb7be42bc2b82, type: 3}
---- !u!114 &28848441563301871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148406837086735441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bc8d3adb33a4b7469c7199a06593126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interpolationDataSource: 0
-  pizza: {fileID: 2610511755372875678, guid: a119e61099524d04c90780a517458797, type: 3}
-  runner: {fileID: 1431638035156470358}
-  hasSpawned: 0
-  time: 0
---- !u!114 &4892138380135334777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148406837086735441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectInterest: 1
-  DefaultInterestGroups: []
-  DestroyWhenStateAuthorityLeaves: 0
-  AllowStateAuthorityOverride: 1
-  AoiPositionSource: {fileID: 0}
-  Flags: 2305
-  NetworkGuid:
-    RawGuidValue: bb41ecab1293afc498454d6d582f0b58
-  NestedObjects: []
-  NetworkedBehaviours:
-  - {fileID: 28848441563301871}
-  SimulationBehaviours: []
---- !u!114 &7797904396008195390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148406837086735441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd8df5c00480a8742b7b7304baa5413d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoints:
-  - {fileID: 5990676474222652650, guid: 26732a108677d144dbaa337dff8f87ee, type: 3}
-  - {fileID: 4736181338505363176, guid: 768259cdb063c5b46bf7beaf3cd19d86, type: 3}
