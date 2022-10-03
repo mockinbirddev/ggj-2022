@@ -6,7 +6,10 @@ public class Item : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        Debug.Log("Pizza Acquired!");
-        Destroy(this.gameObject);
+        if(other.tag == "Player")
+        {
+            Debug.Log("Pizza Acquired!");
+            Destroy(this.gameObject);
+        }
     }
 }
