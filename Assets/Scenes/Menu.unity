@@ -1088,11 +1088,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _networkRunnerPrefab: {fileID: 3599972903675397781, guid: 8c4c160c625826e4e80c8463fb136254, type: 3}
-  _playerDataPrefab: {fileID: 2062353862937939648, guid: c39f21c6fffd88f408deee87e79c4ecf, type: 3}
   _nickName: {fileID: 1310322751}
-  _nickNamePlaceholder: {fileID: 825543225}
   _roomName: {fileID: 1625699033}
-  _gameSceneName: TestSite
+  scene: TestSite
 --- !u!1 &825543222
 GameObject:
   m_ObjectHideFlags: 0

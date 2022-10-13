@@ -16,7 +16,8 @@ public class NetworkRunnerHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(GameObject.Find("MenuNetworkRunnerPF"));
+        _sessionName = PlayerPrefs.GetString("RoomNickname");
+        // Destroy(GameObject.Find("MenuNetworkRunnerPF"));
         if(networkRunner == null) networkRunner = Instantiate(networkRunnerPrefab);
         networkRunner.name = "Network Runner";
 

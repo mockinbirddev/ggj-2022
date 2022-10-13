@@ -3,23 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Fusion;
+using TMPro;
 
 public class NetworkPlayer : NetworkBehaviour, IPlayerLeft
 {
     public static NetworkPlayer local {get; set;}
     public static int playersIn = 0;
+    public TextMeshProUGUI playerNicknameTM;
+    [Networked(OnChanged = nameof(OnNickNameChanged))]
+    public NetworkString<_16> networkNickname {get; set;}
     // Start is called before the first frame update
     public override void Spawned()
     {
-        if(Runner.SessionInfo.IsOpen == false)
-        {
-            Runner.SetActiveScene("Menu");
-        }
         playersIn++;
         //Check this to make sure this doesn't run on every client
         if(Object.HasInputAuthority)
         {
             local = this;
+            RPC_NickName(PlayerPrefs.GetString("PlayerNickname"));
             
             Debug.Log("Spawned local player");
             Debug.Log("There are " +playersIn.ToString()+" players");
@@ -51,5 +52,20 @@ public class NetworkPlayer : NetworkBehaviour, IPlayerLeft
             Runner.Shutdown();
         }
         
+    }
+    static void OnNickNameChanged(Changed<NetworkPlayer> changed)
+    {
+        changed.Behaviour.OnNickNameChanged();
+    }
+
+    private void OnNickNameChanged()
+    {
+        playerNicknameTM.text = networkNickname.ToString();
+    }
+
+    [Rpc(RpcSources.InputAuthority, RpcTargets.StateAuthority)]
+    public void RPC_NickName(string nickName, RpcInfo info = default)
+    {
+        this.networkNickname = nickName;
     }
 }
