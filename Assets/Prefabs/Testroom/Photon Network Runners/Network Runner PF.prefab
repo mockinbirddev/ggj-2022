@@ -57,4 +57,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac6128e344a8714b8b6d0926db6ca27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 651203320086808080, guid: 271cb8c639121934585bb7be42bc2b82, type: 3}
+  playerPrefab: {fileID: 0}
+  playerPrefabPool:
+  - {fileID: 2722709696060356933, guid: e6d970443eb3a9c4aa901f09b373584e, type: 3}
+  - {fileID: 444182086506396315, guid: cb75f4211832fca45892a51dff2c5ac3, type: 3}
+  - {fileID: 4495950621790784882, guid: 52925debda4bd154786123829ab13f27, type: 3}
+  - {fileID: 3182372148667275959, guid: eda9d2871d0234b45aacbc4676c28fe8, type: 3}
+  - {fileID: 1680040901514282124, guid: 9a0705109a6e73b47871913846c42239, type: 3}
+  - {fileID: 7950819808434747058, guid: 1f259e9d440f5d141a8b41b333408be4, type: 3}
+  - {fileID: 4872356007927872810, guid: 391cdef1b6c12e24e92c1692935a8f54, type: 3}
+  - {fileID: 3431569994431807510, guid: d733f5b78c14e7b43a385c6be66aa0c0, type: 3}

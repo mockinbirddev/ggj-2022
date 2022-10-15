@@ -10,12 +10,18 @@ public class Spawner : MonoBehaviour, INetworkRunnerCallbacks
     //Other Components
     CharacterInputHandler characterInputHandler;
     public NetworkPlayer playerPrefab;
+    public List<NetworkPlayer> playerPrefabPool;
 
     public void OnPlayerJoined(NetworkRunner runner, PlayerRef player) 
     { 
+        Debug.Log(runner.SessionInfo.Name);
+        Debug.Log(PlayerPrefs.GetString("RoomNickname"));
         if(runner.IsServer)
         {
+            int prefIndex = UnityEngine.Random.Range(0,7);
+            playerPrefab = playerPrefabPool[UnityEngine.Random.Range(0,7)];
             runner.Spawn(playerPrefab, Utils.GetRandomSpawnPoint(), Quaternion.identity, player);
+            playerPrefabPool.Remove(playerPrefabPool[prefIndex]);
         }
         else
         {
