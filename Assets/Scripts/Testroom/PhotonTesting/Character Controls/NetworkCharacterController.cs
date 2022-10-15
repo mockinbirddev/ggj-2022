@@ -10,6 +10,13 @@ public class NetworkCharacterController : NetworkBehaviour
     public Rigidbody2D rigidbody2D;
     public float speed = 5f;
     public Animator _animator;
+    public GameObject pizza;
+    public int pizzaAmmo = 0;
+    public Transform[] projectileSpawnpoint;
+    public AudioSource _throwSound;
+    public int points = 0;
+    
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -23,6 +30,57 @@ public class NetworkCharacterController : NetworkBehaviour
         CharacterAnimator(rigidbody2D.velocity,_animator);
         rigidbody2D.velocity = movementVelocity;
         
+    }
+
+    public void GetPoints()
+    {
+        points += 20;
+    }
+
+    public void Throw(PizzaProjectileHandler projectile)
+    {
+        CharacterInputHandler inputDirection = GetComponent<CharacterInputHandler>();
+        if(pizzaAmmo > 0)
+        {
+            _throwSound.Play();
+        }
+        if(pizzaAmmo > 0)
+        {
+            if(inputDirection.direction == CharacterInputHandler.characterFacing.Up)
+            {
+                PizzaProjectileHandler proj = Runner.Spawn(projectile, projectileSpawnpoint[0].position, Quaternion.identity);
+                proj._characterInputHandler = this.GetComponent<CharacterInputHandler>();
+                proj.tag = this.tag;
+                pizzaAmmo--;
+                Debug.Log(pizzaAmmo);
+            }
+            else if(inputDirection.direction == CharacterInputHandler.characterFacing.Down)
+            {
+                PizzaProjectileHandler proj = Runner.Spawn(projectile, projectileSpawnpoint[1].position, Quaternion.identity);
+                proj._characterInputHandler = this.GetComponent<CharacterInputHandler>();
+                proj.tag = this.tag;
+                pizzaAmmo--;
+                Debug.Log(pizzaAmmo);
+            }
+            else if(inputDirection.direction == CharacterInputHandler.characterFacing.Left)
+            {
+                PizzaProjectileHandler proj = Runner.Spawn(projectile, projectileSpawnpoint[2].position, Quaternion.identity);
+                proj._characterInputHandler = this.GetComponent<CharacterInputHandler>();
+                proj.tag = this.tag;
+                pizzaAmmo--;
+                Debug.Log(pizzaAmmo);
+            }
+            else if(inputDirection.direction == CharacterInputHandler.characterFacing.Right)
+            {
+                PizzaProjectileHandler proj = Runner.Spawn(projectile, projectileSpawnpoint[3].position, Quaternion.identity);
+                proj._characterInputHandler = this.GetComponent<CharacterInputHandler>();
+                proj.tag = this.tag;
+                pizzaAmmo--;
+                Debug.Log(pizzaAmmo);
+            }
+        }
+        
+            
     }
 
     public void CharacterAnimator(Vector2 velocity, Animator animator)

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CompositeSpawnPoint : MonoBehaviour
 {
     // Start is called before the first frame update
-    public List<SpawnZoneTemplate> spawnPoints = new List<SpawnZoneTemplate>();
+    public List<SpawnPointLocation> spawnPoints = new List<SpawnPointLocation>();
 
     public Vector2 GetSpawnPoint()
     {
