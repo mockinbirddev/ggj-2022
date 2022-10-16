@@ -124,4 +124,9 @@ public class NetworkCharacterController : NetworkBehaviour
             animator.SetBool("isIdle", true);
         }
     }
+
+    public void ExitingMenu(ExitMenu exitMenu)
+    {
+        Runner.Spawn(exitMenu, Vector2.zero, Quaternion.identity);
+    }
 }

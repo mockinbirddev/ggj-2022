@@ -7,4 +7,5 @@ public struct NetworkInputData : INetworkInput
 {
     public Vector2 movementInput;
     public NetworkBool isThrowButtonPressed;
+    public NetworkBool isEscKeyPressed;
 }

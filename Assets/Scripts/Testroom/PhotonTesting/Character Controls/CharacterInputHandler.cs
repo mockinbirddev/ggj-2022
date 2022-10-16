@@ -7,6 +7,7 @@ public class CharacterInputHandler : MonoBehaviour
 {
     public Vector2 movementInputVector = Vector2.zero;
     bool isThrowButtonPressed = false;
+    bool isEscKeyPressed = false;
     public enum characterFacing{
         Up,
         Down,
@@ -19,7 +20,7 @@ public class CharacterInputHandler : MonoBehaviour
     {
         movementInputVector.x = Input.GetAxisRaw("Horizontal");
         movementInputVector.y = Input.GetAxisRaw("Vertical");
-        
+        if(Input.GetKeyDown(KeyCode.Escape)) isEscKeyPressed = true;
         ShootOff();
     }
     public void ShootOff()
@@ -53,8 +54,9 @@ public class CharacterInputHandler : MonoBehaviour
 
         networkInputData.movementInput = movementInputVector;
         networkInputData.isThrowButtonPressed = isThrowButtonPressed;
-
+        networkInputData.isEscKeyPressed = isEscKeyPressed;
         isThrowButtonPressed = false;
+        isEscKeyPressed = false;
         return networkInputData;
     }
 }
