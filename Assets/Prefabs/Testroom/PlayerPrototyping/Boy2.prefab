@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: pizza
       value: 
       objectReference: {fileID: 2908136138427715616, guid: a8c5a49c901fe9046b0c582f0363837e, type: 3}
+    - target: {fileID: 3225859345332366559, guid: 271cb8c639121934585bb7be42bc2b82, type: 3}
+      propertyPath: exitMenu
+      value: 
+      objectReference: {fileID: 3216268957530233795, guid: f7d5a847423e3af40925a8931de9d67a, type: 3}
     - target: {fileID: 3438932362802504842, guid: 271cb8c639121934585bb7be42bc2b82, type: 3}
       propertyPath: sfx
       value: 
